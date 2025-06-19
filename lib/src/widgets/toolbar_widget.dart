@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'dart:ui';
+
 import 'package:file_picker/file_picker.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';
 import 'package:flutter/foundation.dart';
@@ -1065,7 +1065,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                     true;
                 if (proceed) {
                   widget.controller.execCommand('foreColor',
-                      argument: (Colors.black.toARGB32() & 0xFFFFFF)
+                      argument: (Colors.black & 0xFFFFFF)
                           .toRadixString(16)
                           .padLeft(6, '0')
                           .toUpperCase());
@@ -1079,7 +1079,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                     true;
                 if (proceed) {
                   widget.controller.execCommand('hiliteColor',
-                      argument: (Colors.yellow.toARGB32() & 0xFFFFFF)
+                      argument: (Colors.yellow & 0xFFFFFF)
                           .toRadixString(16)
                           .padLeft(6, '0')
                           .toUpperCase());
@@ -1181,7 +1181,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                 if (t.getIcons()[index].icon ==
                                     Icons.format_color_text) {
                                   widget.controller.execCommand('foreColor',
-                                      argument: (newColor.toARGB32() & 0xFFFFFF)
+                                      argument: (newColor & 0xFFFFFF)
                                           .toRadixString(16)
                                           .padLeft(6, '0')
                                           .toUpperCase());
@@ -1192,7 +1192,7 @@ class ToolbarWidgetState extends State<ToolbarWidget> {
                                 if (t.getIcons()[index].icon ==
                                     Icons.format_color_fill) {
                                   widget.controller.execCommand('hiliteColor',
-                                      argument: (newColor.toARGB32() & 0xFFFFFF)
+                                      argument: (newColor & 0xFFFFFF)
                                           .toRadixString(16)
                                           .padLeft(6, '0')
                                           .toUpperCase());
